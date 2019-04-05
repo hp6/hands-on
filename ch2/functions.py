@@ -21,3 +21,8 @@ def fetch_housing_data(housing_url=HOUSING_URL, housing_path=HOUSING_PATH):
 def load_csv_data(path=HOUSING_PATH, filename="housing.csv"):
     file_path = os.path.join(path, filename)
     return pd.read_csv(file_path)
+
+def display_scores(scores):
+    print("scores: {}".format(scores))
+    print("mean: {}".format(scores.mean()))
+    print("standad deviation: {}".format(scores.std()))
